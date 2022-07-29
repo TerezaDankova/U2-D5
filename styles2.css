@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fcfcfc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.main-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+}
+
+.containerOne {
+  display: flex;
+  flex-direction: column;
+  background: rgb(238,255,253);
+  background: linear-gradient(90deg, rgba(238,255,253,1) 0%, rgba(108,188,208,1) 38%, rgba(179,237,242,1) 100%);
+  padding: 50px;
+  border-radius: 5px;
+  max-width: 100%;
+ 
+}
+.titleFlex {
+  display: flex;
+  align-self: center;
+}
+.inputOneFlex {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.inputTwoFlex {
+  display: flex;
+  align-self: center;
+}
+.buttonFlex{
+  display: flex;
+  align-self: center;
+}
+
+.resultBoardTeams{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.resultBoard{
+  color: black;
+  font-size: 12px;
+}
+
+textarea, input {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+}
+
+
+#buttons:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.title {
+  color: rgb(28 67 94);
+  width: 100%;
+  font-size: 89px;
+  letter-spacing: 16px;
+}
+.member {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  margin-top: 100px;
+
+}
+#resetButton {
+  width: 200px;
+  height: 50px;
+  background-color: #6354ad;
+  padding: 40px;
+  border: none;
+}
+
+#reset:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.teams {
+ background-color: #4CAF50;
+  padding: 30px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2em;
+  transition: all 0.5s ease-out;
+}
+
+
+
+p {
+  margin: 15px;
+}
+
+
+
+
+
+#nameOne {
+  background-color: transparent;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  width: 400px;
+  height: 50px;
+  color: rgb(28 67 94);
+  border: 3px solid;
+  border-radius: 20px;
+  padding-left: 30px;
+  font-weight: lighter;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+  
+#output {
+  background-color: transparent;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  width: 400px;
+  height: 200px;
+  color: rgb(28 67 94);
+  border: 3px solid;
+  border-radius: 20px;
+}
+
+
+#list {
+  background-color: transparent;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  width: 400px;
+  height: 200px;
+  color: rgb(28 67 94);
+  border: 3px solid;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-top: 15px;
+  font-weight: lighter;
+  cursor: pointer;
+  outline: none;
+  
+  
+}
+.addText {
+  font-size: 16px;
+  color: rgb(28 67 94);
+  margin-top: -24px;
+  margin-left: -262px;
+  position: absolute;
+}
+.resultBoard{
+  font-size: 40px;
+  color: rgb(28 67 94);
+  letter-spacing: 5px;
+}
+
+
+#btnAdd {
+  background-color: #4c98af; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  letter-spacing: 3px;
+}
+
+.inputOneButton {
+  display: flex;
+  justify-content: center;
+}
+.inputOneNumberFlex {
+  display: flex;
+  justify-content: center;
+  margin-top: 9px;
+}
+.inputOneRemoveButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 9px;
+}
+#btnRemove {
+  background-color: #4c98af; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  letter-spacing: 3px;
+}
+.inputTwoFlex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+  margin-top: 19px;
+}
+#numberTeam {
+  background-color: transparent;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  width: 400px;
+  height: 50px;
+  color: rgb(28 67 94);
+  border: 3px solid;
+  border-radius: 20px;
+  padding-left: 30px;
+  font-weight: lighter;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+  position: relative;
+}
+#buttonShuffle {
+  background-color: #4c98af; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  letter-spacing: 3px;
+}
+#resetButton {
+  background-color: #4c98af; /* Green */
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.addTextTeams{
+  font-size: 16px;
+  color: rgb(28 67 94);
+  margin-top: -24px;
+  margin-left: -293px;
+  position: absolute;
+}

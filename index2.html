@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Generator</title>
+    <link rel="stylesheet" href="./styleS2.css" />
+  </head>
+
+
+  <body>
+    <div class="main-container">
+
+      <div class="containerOne">
+
+        <div class="titleFlex">
+           <h1 class="title">TEAM GENERATOR</h1></div>
+        <!-- 
+        <div class="inputOneFlex">
+          
+          <label>Add Member</label>
+          <textarea name="" id="myInput" cols="30" rows="10" placeholder="Put the name, split it with one comma and one white space (, )"></textarea>
+        </div>
+        -->  
+        <div id="container">
+          <form>
+            <div class="inputOneFlex">
+              <label class="addText" for="nameOne">Add Name:</label>
+              <input type="text" id="nameOne" placeholder="Enter a framework" autocomplete="off">
+            </div>
+            <div class="inputOneButton">
+              <button id="btnAdd">ADD</button>
+            </div>
+            <div class="inputOneNumberFlex">
+              <label for="list"></label>
+              <select id="list" name="list" multiple>
+              </select>
+            </div> 
+            <div class="inputOneRemoveButton">
+              <button id="btnRemove">REMOVE</button>
+            </div>   
+          </form>
+        </div>
+
+        <br />
+       
+        <div class="inputTwoFlex">
+          <label class="addTextTeams" for="nameOne">Teams:</label>
+          <input type="number" placeholder="Group Amount" id="numberTeam" />
+          <br />
+        </div>
+        <div class="buttonFlex">
+          <button type="button" id="buttonShuffle" onclick="getInputValue()" value="Submit">ASSIGN MEMBER</button>
+        </div>
+        <div class="resultBoardTeams">
+        <h2 class="resultBoard">GROUP LIST</h2>
+
+        <div id="output" class="output"></div>
+
+        <button id="resetButton" class="resultBoard">RESET</button>
+      </div>
+    </div>
+
+    <script src="./node.js"></script>
+  </body>
+</html>
