@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .favourite-albums {
+            background:linear-gradient(90deg, rgba(58,180,150,0.7600083978904062) 0%, rgba(253,152,29,0.4042661009716386) 50%, rgba(252,176,69,1) 100%);
+        }
+        .review {
+            background-image: url('https://media.istockphoto.com/photos/forest-wooden-table-background-summer-sunny-meadow-with-green-grass-picture-id1353553203?b=1&k=20&m=1353553203&s=170667a&w=0&h=QTyTGI9tWQluIlkmwW0s7Q4z7R_IT8egpzzHjW3cSas=');
+            height:100vh;
+            width: 100%;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .review {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        .review table {
+            margin-bottom: 0;
+        }
+        .worst-albums {
+            background-image: url('https://www.incimages.com/uploaded_files/image/1920x1080/getty_484825782_351130.jpg');
+            height:100vh;
+            width: 100%;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .worst-albums {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .worst-albums h1 {
+            margin-top: 50px;
+            font-size: 5rem;
+            font-weight: 700;
+        }
+        .fav-musician {
+            background-image: url('https://i.pinimg.com/originals/7d/7b/3c/7d7b3c80903b8d76fe5ff5a42bb34c91.jpg');
+            height:100vh;
+            width: 100%;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .fav-musician div h1 {
+            font-size: 8rem;
+            color: white;
+            padding-top: 150px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+         img {
+            object-fit: cover;
+            width:  300px !important;
+            height: 300px !important;
+                    }
+        @keyframes fadedOpacity {
+            0% {
+             opacity: 0;
+                }
+            100% {
+             opacity: 1;
+                }
+        }
+        .jumbotron {
+           background-color:  rgb(0 123 255 / 25%) ;
+           animation: 1s ease-out 0s 1 fadedOpacity;
+        }
+        ul li {
+            list-style-type: circle;
+        }
+        .logo-img {
+            object-fit: cover;
+            height: 24px !important;
+            width: 34px !important;
+            position: absolute;
+            top: 0;
+        }
+    
+        .favourite-albums .card {
+            width: 270px;
+            height: 470px;
+        }
+        .custom-class {
+            margin-left: 425px;
+            margin-right: 425px;
+        }
+        .btn1 button {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            box-shadow: 5px 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn1 button:hover{
+            left: 5px;
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px #888888;    
+        }
+        .btn1 {
+            height: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" id="section-navbar" href="#section-navbar">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#section1">My Favourite Album<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#review-of-review">Review</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#worst-section">Worst Album</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#favourite-music">Favourite music</a>
+            </li>
+            
+           
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div class="jumbotron jumbotron-fluid mb-0">
+        <div class="container">
+          <h1 class="display-4">Welcome to my music album page</h1>
+          <p class="lead">Navigate to favourite Albums , favourite music , Review section and much more!!</p>
+        </div>
+      </div>
+    <section class="favourite-albums" id="section1">
+    <h2 class="text-primary">My favourite Album</h2>
+      <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    
+                    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/7/7f/J_Balvin_and_Bad_Bunny_-_Oasis.png" alt="Card image cap">
+                    <img class="logo-img" src="https://media.istockphoto.com/vectors/latin-dance-party-lettering-hand-drawing-design-may-be-use-as-a-sign-vector-id1187800739?k=20&m=1187800739&s=612x612&w=0&h=X1x6eJJPv_TLq8WY6LO-YdhehElbuFJXMpNzFxRqwKI=" alt="prime logo">
+                    <div class="card-body">
+                        <ul>
+                            <li>Album Title : Oasis</li>
+                            <li>Artist : J Balvin</li>
+                            <li>Year : 2019</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/1/1a/J_Balvin_-_Colores.png?20200228001336" alt="Card image cap">
+                    <img class="logo-img" src="https://media.istockphoto.com/vectors/latin-dance-party-lettering-hand-drawing-design-may-be-use-as-a-sign-vector-id1187800739?k=20&m=1187800739&s=612x612&w=0&h=X1x6eJJPv_TLq8WY6LO-YdhehElbuFJXMpNzFxRqwKI=" alt="prime logo">
+                    <div class="card-body">
+                      <ul>
+                          <li>Album Title : Colores</li>
+                          <li>Artist : J Balvin</li>
+                          <li>Year : 2020</li>
+                      </ul>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://www.hit-channel.com/wp-content/uploads/2021/09/j-balvin-1519718551-696x464.jpg" alt="Card image cap">
+                    <img class="logo-img" src="https://media.istockphoto.com/vectors/latin-dance-party-lettering-hand-drawing-design-may-be-use-as-a-sign-vector-id1187800739?k=20&m=1187800739&s=612x612&w=0&h=X1x6eJJPv_TLq8WY6LO-YdhehElbuFJXMpNzFxRqwKI=" alt="prime logo">
+                    <div class="card-body">
+                        <ul>
+                            <li>Album Title : JOSE</li>
+                            <li>Artist : J Balvin</li>
+                            <li>Year : 2021</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/rzgw0XldTC0/maxresdefault.jpg" alt="Card image cap">
+                    <img class="logo-img" src="https://media.istockphoto.com/vectors/latin-dance-party-lettering-hand-drawing-design-may-be-use-as-a-sign-vector-id1187800739?k=20&m=1187800739&s=612x612&w=0&h=X1x6eJJPv_TLq8WY6LO-YdhehElbuFJXMpNzFxRqwKI=" alt="prime logo">
+                    <div class="card-body">
+                        <ul>
+                            <li>Album Title : Ambiente (single)</li>
+                            <li>Artist : J Balvin</li>
+                            <li>Year : 2018</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://www.elsiglodedurango.com.mx/m/i/2018/02/669185.jpeg" alt="Card image cap">
+                    <img class="logo-img" src="https://media.istockphoto.com/vectors/latin-dance-party-lettering-hand-drawing-design-may-be-use-as-a-sign-vector-id1187800739?k=20&m=1187800739&s=612x612&w=0&h=X1x6eJJPv_TLq8WY6LO-YdhehElbuFJXMpNzFxRqwKI=" alt="prime logo">
+                    <div class="card-body">
+                        <ul>
+                            <li>Album Title : Ahora (single)</li>
+                            <li>Artist : J Balvin</li>
+                            <li>Year : 2018</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        </div>
+    </div>    
+    </section>
+    <section class="review">
+        <h1>Review of my favourite Album </h1>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/BQ31l1gPGKM/maxresdefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">J Balvin - Ambiente</h5>
+                      <p class="card-text">Subscribe to J Balvin's channel <br>Listen to J Balvin’s Top Hits on your favorite streaming platform</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>  
+        </div>   
+        <table id="review-of-review" class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Band</th>
+                <th scope="col">Title</th>
+                <th scope="col">Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+    <section class="worst-albums" id="worst-section">
+        <h1 class="text-danger">Worst Album List </h1>
+        
+       <div class="row mx-0">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="https://www.wikihow.com/images/thumb/1/11/Make-a-Photo-Album-from-Recycled-Materials-Step-11.jpg/v4-460px-Make-a-Photo-Album-from-Recycled-Materials-Step-11.jpg.webp" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Worst Album</h5>
+                  <p class="card-text">worst album ever</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="https://www.wikihow.com/images/thumb/1/11/Make-a-Photo-Album-from-Recycled-Materials-Step-11.jpg/v4-460px-Make-a-Photo-Album-from-Recycled-Materials-Step-11.jpg.webp" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Worst Album</h5>
+                  <p class="card-text">worst album ever</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="https://www.wikihow.com/images/thumb/1/11/Make-a-Photo-Album-from-Recycled-Materials-Step-11.jpg/v4-460px-Make-a-Photo-Album-from-Recycled-Materials-Step-11.jpg.webp" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Worst Album</h5>
+                  <p class="card-text">worst album ever</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>       
+       </div>   
+    </section>
+    <section class="fav-musician" id="favourite-music">
+        <div class="container">
+            <h1>J BALVIN</h1>
+        </div>
+    </section>
+     <section class="pictures">
+       <div class=" custom-class">
+        <div class="row no-gutters"> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/rzgw0XldTC0/maxresdefault.jpg" alt="Card image cap">
+            </div>  
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img class="card-img-top" src="data:image/jpeg;base64,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" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F08%2F27%2Fj-balvin.jpg&q=60" alt="Card image cap">
+            </div>  
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThTY2VsMip99Zx_Jx908gHN22AZEryiMffoA&usqp=CAU" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://yt3.ggpht.com/H74yt3jE9tPLeHvagQ0gpTUHTaZrYtv3iIRbz6o2cWR1McnHolWVB2hAV2Dfw-bQyqFu-I6gmg=s400-c-k-c0x00ffffff-no-rj" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://www.soundexchange.com/wp-content/uploads/2016/09/J-Balvin_F_recd-Oct-2018.jpg" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://static.toiimg.com/thumb/msid-75181363,width-800,height-600,resizemode-75,imgsize-41338,pt-32,y_pad-40/75181363.jpg" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://images.complex.com/complex/images/c_fill,f_auto,g_center,w_1200/fl_lossy,pg_1/h0ydey5nzkqohait3ev6/j-balvin" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://africanentertainment.com/wp-content/uploads/2021/10/J-Balvin.jpg" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRzNuwtZHzniW_3P6_jFPBnQNTin--XZzX0w&usqp=CAU" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ZCZPmOxPPJTIoYMcoyJH16lykZw3AZnPOQ&usqp=CAU" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROaqAuuZEtnuAn0Y6nfQPR6T59YMVi2VuxIg&usqp=CAU" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://www.udiscovermusic.com/wp-content/uploads/2022/01/J-Balvin-Getty-1350552825-copy.jpg" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRagZjkHSpnQLbqWxD-G223sIZVcPBGmeno9Q&usqp=CAU" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://www.hit-channel.com/wp-content/uploads/2020/03/j-balvin-34109685-696x364.jpg" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://www.soundarts.gr/wp-content/uploads/2018/04/Liam-Payne-J-Balvin-Familiar-.jpg" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://marketresearchtelecast.com/wp-content/uploads/2021/10/1635384755_They-study-a-request-for-protection-against-the-Colombian-singer.JPG" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://media.gq.com/photos/5eebe6b1260a22606ba25de5/master/pass/GQ-JBalvin-061920.jpg" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://imgix.bustle.com/uploads/image/2021/4/28/71e71851-f570-4261-bbb3-69f8ef631abc-wm202103balv3.jpg?w=375&h=500&fit=crop&crop=faces&auto=format%2Ccompress" alt="Card image cap">
+            </div> 
+            <div class="col-sm-6 col-md-4 col-lg-3">   
+                <img class="card-img-top" src="https://www.soundarts.gr/wp-content/uploads/2018/03/nicky-jam-feat-j-balvin.jpg" alt="Card image cap">
+            </div> 
+
+        </div>  
+    </div>    
+    </section> 
+    <section class="album-tracklist">
+        <h1>Album TrackList</h1>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Artist</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Ahora</td>
+                    <td>J Balvin</td>
+                    <td>04:07</td>
+                    <td><button type="button"  class="btn btn-danger">Danger</button></td>
+                  </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Rosa</td>
+                <td>J Balvin</td>
+                <td>03:49</td>
+                <td><button type="button"  class="btn btn-danger">Danger</button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Rojo</td>
+                <td>J Balvin</td>
+                <td>04:45</td>
+                <td><button type="button"  class="btn btn-danger">Danger</button></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Blanco</td>
+                <td>J Balvin</td>
+                <td>02:34</td>
+                <td><button type="button"  class="btn btn-danger">Danger</button></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Morado</td>
+                <td>J Balvin</td>
+                <td>03:44</td>
+                <td><button type="button"  class="btn btn-danger">Danger</button></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Gris</td>
+                <td>J Balvin</td>
+                <td>03:16</td>
+                <td><button type="button"  class="btn btn-danger">Danger</button></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Ambiente</td>
+                <td>J Balvin</td>
+                <td>04:18</td>
+                <td><button type="button"  class="btn btn-danger">Danger</button></td>
+              </tr>
+           
+            </tbody>
+          </table>
+          <div class="btn1">
+            <button type="button" id="add-track">Add Track</button>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+    
+</body>
+</html>

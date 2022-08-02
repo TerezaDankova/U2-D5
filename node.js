@@ -1,5 +1,5 @@
 const output = document.getElementById("output");
-const buttons = document.getElementById("buttons");
+const buttons = document.getElementById("buttonShuffle");
 const reset = document.getElementById("resetButton");
 const container = document.querySelector(".containerOne");
 const answer = document.querySelector(".resultBoard");
@@ -14,24 +14,40 @@ const nameOne = document.querySelector('#nameOne');
 btnAdd.onclick = (e) => {
   e.preventDefault();
 
-  // validate the option
   if (nameOne.value == '') {
       alert('Please enter the name.');
       return;
   }
 
-  // create a new option
   const option = new Option(nameOne.value, nameOne.value);
-  // add it to the list
+
   sb.add(option, undefined);
 
-  // reset the value of the input
   nameOne.value = '';
   nameOne.focus();
 };
 
+  
 
-  function getInputValue() {
+btnRemove.onclick = (e) => {
+  e.preventDefault();
+
+  let selected = [];
+
+  for (let i = 0; i < sb.options.length; i++) {
+      selected[i] = sb.options[i].selected;
+  }
+
+  let index = sb.options.length;
+  while (index--) {
+      if (selected[index]) {
+          sb.remove(index);
+      }
+  }
+};
+
+
+function getInputValue() {
     const values = sb.value;
     const total = sums.value;
     let person = values.split(",");
@@ -40,11 +56,11 @@ btnAdd.onclick = (e) => {
     console.log(random);
 
 
-    function chunk(sb, size) {
-      if (sb.length <= size) {
-        return [sb];
+    function chunk(Array, size) {
+      if (Array.length <= size) {
+        return [Array];
       }
-      return [sb.slice(0, size), ...chunk(sb.slice(size), size)];
+      return [Array.slice(0, size), ...chunk(Array.slice(size), size)];
     }
   
     var team = chunk(random, total);
@@ -52,19 +68,15 @@ btnAdd.onclick = (e) => {
     for (let i = 0; i < team.length; i++) {
       output.innerHTML += `<p> Team ${i + 1}: ${team[i]} </p>`;
     } 
-  }
+};
 
 
   buttons.addEventListener("click", () => {
-  
     container.classList.toggle("resultBoard");
     reset.classList.toggle("resultBoard");
     answer.classList.toggle("resultBoard");
-    
     teams.classList.toggle("visible");
   });
-  
-  
   
   
   reset.addEventListener("click", () => {
@@ -79,24 +91,5 @@ btnAdd.onclick = (e) => {
 
 
 
-  
-// remove selected option
-btnRemove.onclick = (e) => {
-    e.preventDefault();
 
-    // save the selected option
-    let selected = [];
-
-    for (let i = 0; i < sb.options.length; i++) {
-        selected[i] = sb.options[i].selected;
-    }
-
-    // remove all selected option
-    let index = sb.options.length;
-    while (index--) {
-        if (selected[index]) {
-            sb.remove(index);
-        }
-    }
-};
 
